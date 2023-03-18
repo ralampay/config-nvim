@@ -35,6 +35,10 @@ treesitter.setup({
     "python",
     "c_sharp",
   },
+  git = {
+    enable = true,
+    ignore = false,
+  },
   -- auto install above language parsers
   auto_install = true,
 })
