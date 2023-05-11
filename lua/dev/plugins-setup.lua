@@ -37,8 +37,6 @@ return packer.startup(function(use)
   use("christoomey/vim-tmux-navigator")
 
   -- essential plugins
-  use('scrooloose/nerdtree')
-  use('vim-ruby/vim-ruby')
   use('mustache/vim-mustache-handlebars')
   use('tpope/vim-surround')
   use('tpope/vim-abolish')   
@@ -49,6 +47,9 @@ return packer.startup(function(use)
   use('junegunn/fzf')
   use('junegunn/fzf.vim')                                                      
   use {'neoclide/coc.nvim', branch = 'release'}
+
+  -- https://github.com/andweeb/presence.nvim
+  use('andweeb/presence.nvim')
 
   use {
     'nvim-tree/nvim-tree.lua',
