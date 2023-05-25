@@ -37,26 +37,18 @@ return packer.startup(function(use)
   use("christoomey/vim-tmux-navigator")
 
   -- essential plugins
-  use('mustache/vim-mustache-handlebars')
   use('tpope/vim-surround')
   use('tpope/vim-abolish')   
-  use('pangloss/vim-javascript')
-  use('leafgarland/typescript-vim')
-  use('mxw/vim-jsx')
   use('OmniSharp/omnisharp-vim')
   use('junegunn/fzf')
   use('junegunn/fzf.vim')                                                      
   use {'neoclide/coc.nvim', branch = 'release'}
 
-  -- https://github.com/andweeb/presence.nvim
-  use('andweeb/presence.nvim')
-
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
   }
 
   -- treesitter
