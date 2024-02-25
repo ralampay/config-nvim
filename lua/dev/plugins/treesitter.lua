@@ -7,8 +7,10 @@ end
 -- configure treesitter
 treesitter.setup({
   -- enable syntax highlighting
+  ignore_install = { "comment" },
   highlight = {
     enable = true,
+    disable = { "phpdoc" }
   },
   -- enable indentation
   indent = { 
@@ -36,6 +38,8 @@ treesitter.setup({
     "gitignore",
     "python",
     "c_sharp",
+    "php",
+    "phpdoc",
   },
   git = {
     enable = true,
