@@ -37,6 +37,7 @@ treesitter.setup({
     "dockerfile",
     "gitignore",
     "python",
+    "go",
     "c_sharp",
     "php",
     "phpdoc",
