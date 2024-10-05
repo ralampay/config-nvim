@@ -2,5 +2,10 @@
   "coc.source.vimtex.filetypes": [
     "tex",
     "plaintex"
-  ]
+  ],
+  "tsserver.enable": true,
+  "tsserver.useLocalTsdk": false,
+  "tsserver.formatOnType": false,
+  "tsserver.implicitProjectConfig.checkJs": false,
+  "typescript.preferences.importModuleSpecifier": "relative"
 }

@@ -36,12 +36,16 @@ return packer.startup(function(use)
   -- tmux & split window navigation
   use("christoomey/vim-tmux-navigator")
 
+  -- LSP configuration
+  use 'neovim/nvim-lspconfig'
+
   -- essential plugins
   use('tpope/vim-surround')
   use('tpope/vim-abolish')   
   use('OmniSharp/omnisharp-vim')
   use('junegunn/fzf')
-  use('junegunn/fzf.vim')                                                      
+  use('junegunn/fzf.vim')
+  use('dmmulroy/tsc.nvim')
   use {'neoclide/coc.nvim', branch = 'release'}
 
   use {
