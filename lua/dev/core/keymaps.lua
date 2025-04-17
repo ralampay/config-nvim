@@ -12,3 +12,12 @@ keymap.set("n", "<leader>tn", ":tabn<CR>")        -- go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>")        -- go to previous tab
 keymap.set("n", "<C-p>", ":Files<CR>")            -- fzf search
 keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>")   -- NvimTreeToggle
+
+keymap.set("v", "<CR>", function()
+  -- Properly exit Visual Mode
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
+  -- Delay slightly to avoid weird pending behavior
+  vim.defer_fn(function()
+    vim.cmd("AvanteAsk")
+  end, 50)
+end, { desc = "Avante: Submit Visual Selection" })
