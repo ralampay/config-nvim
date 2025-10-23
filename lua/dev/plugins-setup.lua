@@ -37,7 +37,7 @@ return packer.startup(function(use)
   use("christoomey/vim-tmux-navigator")
 
   -- LSP configuration
-  use 'neovim/nvim-lspconfig'
+  use "neovim/nvim-lspconfig"
 
   -- essential plugins
   use('tpope/vim-surround')
