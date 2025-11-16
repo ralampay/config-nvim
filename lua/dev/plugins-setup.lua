@@ -82,6 +82,11 @@ return packer.startup(function(use)
     config = function()
       require('avante').setup({
         provider = "openai",
+        providers = {
+          openai = {
+            model = "gpt-5"
+          }
+        },
         behaviour = {
           auto_apply_diff_after_generation = false, -- VERY IMPORTANT
           enable_cursor_planning_mode = false,       -- VERY IMPORTANT
