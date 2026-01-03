@@ -96,6 +96,33 @@ return packer.startup(function(use)
     end
   }
 
+  use {
+    'kkrampis/codex.nvim',
+    cmd = { 'Codex', 'CodexToggle' },
+    setup = function()
+      -- Optional: create the keymap before the plugin loads
+      vim.api.nvim_set_keymap('n', '<leader>cc', ':CodexToggle<CR>', { noremap = true, silent = true })
+    end,
+    config = function()
+      require('codex').setup({
+        panel = true,
+        panel_position = "right",
+        panel_width = 40,
+        persist_panel = true,
+
+        keymaps = {
+          quit = "<Esc>",
+        },
+
+        border = "rounded",
+        model = "gpt-5.1-codex-mini",
+        autoinstall = true,
+        use_buffer = false,
+      })
+    end,
+  }
+
+
   if packer_bootstrap then
     require("packer").sync()
   end
