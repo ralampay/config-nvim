@@ -64,38 +64,6 @@ return packer.startup(function(use)
     end,
   })
 
-  -- https://github.com/yetone/avante.nvim
-  use 'stevearc/dressing.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'MunifTanjim/nui.nvim'
-  use 'MeanderingProgrammer/render-markdown.nvim'
-
-  -- Optional dependencies
-  use 'hrsh7th/nvim-cmp'
-  use 'HakonHarnes/img-clip.nvim'
-
-  -- Avante.nvim with build process
-  use {
-    'yetone/avante.nvim',
-    branch = 'main',
-    run = 'make',
-    config = function()
-      require('avante').setup({
-        provider = "openai",
-        providers = {
-          openai = {
-            model = "gpt-5"
-          }
-        },
-        behaviour = {
-          auto_apply_diff_after_generation = false, -- VERY IMPORTANT
-          enable_cursor_planning_mode = false,       -- VERY IMPORTANT
-          auto_suggestions = false,                  -- optional
-        },
-      })
-    end
-  }
-
   use {
     'kkrampis/codex.nvim',
     cmd = { 'Codex', 'CodexToggle' },
@@ -115,7 +83,7 @@ return packer.startup(function(use)
         },
 
         border = "rounded",
-        model = "gpt-5.1-codex-mini",
+        model = "gpt-5.2-codex-mini",
         autoinstall = true,
         use_buffer = false,
       })
