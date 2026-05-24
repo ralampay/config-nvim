@@ -83,7 +83,7 @@ return packer.startup(function(use)
         },
 
         border = "rounded",
-        model = "gpt-5.2-codex-mini",
+        model = "gpt-5.5",
         autoinstall = true,
         use_buffer = false,
       })
