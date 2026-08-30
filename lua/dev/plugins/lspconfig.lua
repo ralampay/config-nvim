@@ -18,5 +18,5 @@ vim.lsp.config.ts_ls = {
   end
 }
 
--- Enable the TypeScript language server
-vim.lsp.enable("ts_ls")
+-- JavaScript/TypeScript support is provided by coc-tsserver.
+-- Do not also enable ts_ls, or both LSP clients will attach to the same buffers.
